@@ -1,0 +1,51 @@
+<div class="pregunta-container">
+  <div class="heart-float">❤️</div>
+  <div class="heart-float heart-float-2">💕</div>
+  <div class="heart-float heart-float-3">💖</div>
+
+  <div class="content-wrapper">
+    <div class="hannah-montana-images">
+      <img
+        src="/images/hanna_montana_old_1.png"
+        alt="Hannah Montana"
+        class="hannah-img"
+      />
+      <img
+        src="/images/hanna_montana_young_1.png"
+        alt="Hannah Montana Show"
+        class="hannah-img"
+      />
+    </div>
+
+    <div class="question-wrapper">
+      <h1 class="title">
+        <span class="heart-icon">💗</span>
+        Leslie Leticia Gabriela Wolowitz Matilda
+        <span class="heart-icon">💗</span>
+      </h1>
+      <h2 class="question">
+        Do you want to watch<br/>The Hannah Montana Anniversary Special?
+      </h2>
+
+      <div class="buttons-container">
+        <button
+          class="btn btn-yes"
+          (click)="onYesClick()"
+        >
+          <span class="btn-text">YES! 💜</span>
+        </button>
+
+        <button
+          class="btn btn-no"
+          (touchstart)="onNoClick($event)"
+          (mouseenter)="onNoClick($event)"
+          [style.top]="noButtonPosition.top"
+          [style.left]="noButtonPosition.left"
+          [style.position]="!isFirstMove ? 'absolute' : 'relative'"
+        >
+          <span class="btn-text">No 😢</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
